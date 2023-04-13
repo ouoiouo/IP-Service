@@ -70,8 +70,8 @@ namespace MyService.Frp.Services
                 // 密钥可前往官网控制台 https://console.cloud.tencent.com/cam/capi 进行获取
                 Credential cred = new()
                 {
-                    SecretId = "AKIDEOOyQhkfMvGPZWIPm2OeFh2CGATq7UYR",
-                    SecretKey = "qVIMJ8o2VuEUcYFlw44wgcQ7iDYr3oiZ"
+                    SecretId = "",
+                    SecretKey = ""
                 };
                 // 实例化一个client选项，可选的，没有特殊需求可以跳过
                 ClientProfile clientProfile = new();
@@ -87,13 +87,13 @@ namespace MyService.Frp.Services
                 // 实例化一个请求对象,每个接口都会对应一个request对象
                 ModifyRecordRequest req = new()
                 {
-                    Domain = "czhxmm.top",
-                    SubDomain = "cx",
+                    Domain = "",
+                    SubDomain = "",
                     RecordType = "AAAA",
                     RecordLine = "默认",
                     TTL = 600,
                     Value = newIPv6,
-                    RecordId = 1240067481
+                    RecordId = 
                 };
                 // 返回的resp是一个ModifyRecordResponse的实例，与请求对象对应
                 ModifyRecordResponse resp = client.ModifyRecordSync(req);
